@@ -8,6 +8,12 @@ Laffy is built with vanilla javascript and utilizes data from [GIPHY.com](https:
 
 <hr/>
 
+## Preview
+
+![Laffy Demo](./images/laffy-demo.gif)
+
+<hr/>
+
 ## Using this repository:
 1. Clone this repo
 1. Create an account at [Giphy.com](https://developers.giphy.com/)
@@ -19,3 +25,14 @@ export const settings = {
 };
 ```
 5. Rename the `Settings-example.js` file to `Settings.js` - _(this file is in the .gitignore in order to prevent your API key from being exposed publicly)_
+
+<hr/>
+
+## Fundamentals Demonstrated:
+- fetching data from external API
+- ES6 modules - importing/exporting
+- git/GitHub version control
+- Math.random()
+- DOM manipulation - .innerHTML
+- event listeners
+- CSS imports and custom properties - (variables)
