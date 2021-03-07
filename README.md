@@ -25,6 +25,8 @@ export const settings = {
 };
 ```
 5. Rename the `Settings-example.js` file to `Settings.js` - _(this file is in the .gitignore in order to prevent your API key from being exposed publicly)_
+6. Launch your favorite HTTP server from the root of the project
+7. Proceed to LAFF your AFF off!!
 
 <hr/>
 
