@@ -5,34 +5,85 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
 main {
     margin: auto;
-    max-width: 225px;
+    max-width: 250px;
     text-align: center;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    margin: 0 .5em;
+}
+
+.icon>img {
+    width: 100%
+}
 .laffy {
     text-align: center;
     font-family: 'Fredoka One', cursive;
-    color: rgb(103, 255, 82)
+    color: rgb(103, 255, 82);
 }
 
 .giphy__wrapper, .joke__wrapper {
     text-align: center;
     background-color: rgb(0, 0, 0);
     padding: 1em;
-    color: whitesmoke
+    color: rgb(216, 216, 216);
+    font-size: 1.3em;
 }
 
 button {
-    margin: 1em;
+    margin: 1em 0;
     border: none;
     padding: .5em 1em;
-    background-color: rgba(102, 255, 82);
+    background-color: rgb(88, 88, 88);
     font-weight: bold;
-    opacity: .5;
+    width: 100%;
 }
 
 button:hover {
-    opacity: 1;
+    background-color: rgb(103, 255, 82);;
 }
+
+footer {
+    margin: auto;
+    max-width: 250px;
+    text-align: center;
+}
+.attribution, .attribution>a {
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+}
+.attribution>a:hover {
+    color: rgb(235, 235, 235);
+    text-decoration: none;
+}
+
+/** 
+ * The default focus style is likely provided by Bootstrap or the browser
+ * but here we override everything else with a visually appealing cross-
+ * browser solution that works well on all focusable page elements
+ * including buttons, links, inputs, textareas, and selects.
+ */
+ *:focus { 
+    outline: 0 !important;
+    box-shadow:
+      0 0 0 .2rem #fff, /* use site bg color to create whitespace for faux focus ring */
+      0 0 0 .35rem #069 !important; /* faux focus ring color */
+  }
+  
+  /**
+   * Undo the above focused button styles when the element received focus
+   * via mouse click or touch, but not keyboard navigation.
+   */
+  *:focus:not(:focus-visible) {
+    outline: 0 !important;
+    box-shadow: none !important;

@@ -1,18 +1,16 @@
-import { getDadJoke, getGiphy } from "./DataManager.js";
+import { getDadJoke, getGiphysFromAPI, useGiphy } from "./DataManager.js";
 
 
-const loadApp = () => {
+const loadJokeAndGiphy = () => {
 
     getDadJoke().then(joke => {
         console.log('joke: ', joke);
         render(jokeHTML(joke), "joke__container")
     })
-    getGiphy().then(giphy => {
-        console.log('giphy: ', giphy);
-        render(giphyHTML(giphy), "giphy__container")
 
-    })
-
+    const giphy = useGiphy()
+    console.log('giphy: ', giphy);
+    render(giphyHTML(giphy), "giphy__container")
 }
 
 const giphyHTML = (giphyObj) => {
@@ -36,7 +34,8 @@ const render = (html, elementId) => {
     element.innerHTML = html
 }
 
-loadApp()
+getGiphysFromAPI()
+    .then(loadJokeAndGiphy)
 
 const laffBtn = document.getElementById("laff-btn")
-laffBtn.addEventListener("click", loadApp)
+laffBtn.addEventListener("click", loadJokeAndGiphy)
